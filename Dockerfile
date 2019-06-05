@@ -12,10 +12,12 @@ RUN apk update && apk add --no-cache\
     pcre-dev
 
 COPY ./requirements.txt ./
-COPY ./uwsgi-app.ini ./
 RUN pip install -r requirements.txt
 
 COPY ./.env ./
 COPY ./src ./src
+COPY ./uwsgi-app.ini ./
+
+ENV PYTHONPATH /docker-flask-app
 
 CMD ["uwsgi", "./uwsgi-app.ini"]
