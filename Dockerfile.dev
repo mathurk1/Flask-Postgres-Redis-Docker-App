@@ -18,4 +18,6 @@ RUN pip install -r requirements.txt
 COPY ./.env ./
 COPY ./src ./src
 
+ENV PYTHONPATH /docker-flask-app
+RUN chmod -x src/app/app.py
 CMD ["python", "src/app/app.py"]

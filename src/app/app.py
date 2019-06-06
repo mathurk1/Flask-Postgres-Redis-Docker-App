@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from flask import Flask
 from flask import render_template, request, redirect, url_for
 from redis import Redis
