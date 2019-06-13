@@ -37,5 +37,12 @@ def db_capture():
         return render_template('captureDbData.html')
 
 
+@app.route('/dbdelete/<name>')
+def db_delete(name):
+    sql_stmt = f'''DELETE FROM PROD.test_table WHERE username = '{name}';'''
+    db_engine.execute(sql_stmt)
+    return redirect(url_for('db_display'))
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True, port=80)

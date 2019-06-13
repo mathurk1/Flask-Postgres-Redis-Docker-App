@@ -6,7 +6,11 @@
 </head>
 <body>
         {% for res in result %}
-            <p>The data from the Db is : {{ res }}</p>
+            <p>The data from the Db is : {{ res }}  
+                <a href = "{{url_for('db_delete', name=res[0])}}">
+                    <input type="button" value="Delete">
+                </a>
+            </p>
         {% endfor %}
 
         <p><a href = "{{url_for('db_capture')}}"><input type="button" value="Capture More Data"/></a>
