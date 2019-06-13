@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Data</title>
+</head>
+<body>
+    <form method = "POST" action ="{{ url_for('db_update' , name = name) }}">
+        <h2>Data From Database</h2>
+        <p>User Name</p>
+        <input type ='text' name='username' value={{name}}>
+        <p>Email Id</p>
+        <input type ='text' name='email' value={{email}}>
+        <p></p>
+        <input type="submit" value="Edit"/>
+    </form>
+</body>
+</html>

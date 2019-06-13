@@ -10,6 +10,9 @@
                 <a href = "{{url_for('db_delete', name=res[0])}}">
                     <input type="button" value="Delete">
                 </a>
+                <a href = "{{url_for('db_update', name=res[0])}}">
+                    <input type="button" value="Update">
+                </a>
             </p>
         {% endfor %}
 
