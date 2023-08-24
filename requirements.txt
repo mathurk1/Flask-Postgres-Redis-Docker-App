@@ -2,5 +2,5 @@ flask
 redis
 flask-SQLAlchemy
 psycopg2
-uWSGI==2.0.17.1
+uWSGI==2.0.22
 python-dotenv
